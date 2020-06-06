@@ -16,7 +16,7 @@ What does this repository contains :
 - Various datasheets
 
 _A note on the LED controller part :_
-I used an IR controller which I had laying arround. It is a common anode controller where the LED I bought are common cathode, this is my my design contains a section to convert the common anode control to a common cathode. This section is not described in the parts list.  
+I used an IR controller which I had laying around. It is a common anode controller where the LED I bought are common cathode, this is why my design contains a section to convert the common anode control to a common cathode. There are also three resistors on the controller output which need to be removed, and instead use a resistor for each LED. This section is not described in the parts list.  
 
 ## Sources
 
