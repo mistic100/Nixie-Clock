@@ -1,0 +1,37 @@
+There are six 16 pins HE14 connectors with 3 different configurations (bad design !).
+Each connectors use 4 pins for the RGB LED.
+
+Seconds, minutes, hours :
+
+  1 - - 0
+  3 - - 2
+  5 - - 4
+  7 - - 6
+  9 - - 8
+ HV - - HV
+  G - - B
+GND - - R
+
+10 seconds, 10 minutes :
+
+  1 - - 0
+  3 - - 2
+  5 - - 4
+ HV - - HV
+    - -
+    - -
+  G - - B
+GND - - R
+
+10 hours :
+
+  1 - - 0
+    - - 2
+    - -
+ HV - - HV
+ I1 - - HV I1
+ I2 - - HV I2
+  G - - B
+GND - - R
+
+I1 and I2 are the separators IN-3 tubes.

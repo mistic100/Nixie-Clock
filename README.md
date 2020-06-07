@@ -16,7 +16,18 @@ What does this repository contains :
 - Various datasheets
 
 _A note on the LED controller part :_
-I used an IR controller which I had laying around. It is a common anode controller where the LED I bought are common cathode, this is why my design contains a section to convert the common anode control to a common cathode. There are also three resistors on the controller output which need to be removed, and instead use a resistor for each LED. This section is not described in the parts list.  
+I used an IR controller which I had laying around. It is a common anode controller where the LED I bought are common cathode, this is why my design contains a section to convert the common anode control to a common cathode. This section is not described in the parts list.  
+
+
+## Flaws
+
+### Minutes and hours set
+Unlike the other designs, I wired the hours and minutes set buttons between VCC and the CLK input of the third and fifth CD4017. This does not always work because the CLK is already in up state half of the time (connected to the CARRY-OUT pin of the previous counter).
+A simple solution is to wire the switchs between CLK of the first counter (after D17) to Q8 (128Hz) and Q4 (2048Hz) outputs of the CD4060, making the clock advance faster.
+
+### LED controller output
+There are three resistors on the controller output which need to be removed, and instead use a resistor for each LED.
+
 
 ## Sources
 
@@ -73,7 +84,9 @@ This section connects the counters output to each cathode.
 | part | qty. | notes |
 |--|--|--|
 | MPSA42 transistor | 47 |
-| 33kOhm resistor | 47 |
+| 33kOhm resistor | 47 | transitor base |
+| 33kOhm resistor | 6 | IN-14 current limit |
+| 150kOhm resistor | 2 | IN-3 current limit |
 
 ### Tubes power
 This section generates the high voltage power required for the tubes. It also integrates a system to only light the tubes for a few seconds after pressing a button.
@@ -84,7 +97,7 @@ This section generates the high voltage power required for the tubes. It also in
 | 100nF capacitor | 1 |
 | 100nF 250V capacitor | 1 |
 | 39kOhm resistor | 1 |
-| NE555 timer | 1 | used in bi-stable configuration |
+| NE555 timer | 1 | used in mono-stable configuration |
 | 10uF capacitor | 1 |
 | 10nF capacitor | 1 |
 | 1MOhm resistor | 1 |
