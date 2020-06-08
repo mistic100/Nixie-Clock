@@ -1,6 +1,6 @@
 # Nixie Clock
 
-This is custom design of a full analog Nixie clock (no micro-controller) inspired my various versions of the same design.
+This is custom design of a Nixie clock using only integrated circuits (no micro-controller) inspired my various versions of the same design.
 
 [Pictures on my website](https://galerie.strangeplanet.fr/index.php?/category/73)
 
