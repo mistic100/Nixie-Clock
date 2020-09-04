@@ -2,6 +2,8 @@
 
 This is custom design of a Nixie clock using only integrated circuits (no micro-controller) inspired my various versions of the same design.
 
+![](https://galerie.strangeplanet.fr/_data/i/upload/2020/06/08/20200608184946-f2dfbe11-me.jpg)
+
 [Pictures on my website](https://galerie.strangeplanet.fr/index.php?/category/73)
 
 Rough timeline :
