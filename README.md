@@ -133,8 +133,9 @@ This is what I used for interfacing.
 ### 3D printed parts
 All printed at home on a Creality Ender 3
 
-- Enclosure, dark wood filament
-- Tubes and indicators holders, black filament
+- Enclosure, dark wood PLA
+- Tubes and indicators holders, black PLA
+- Transport cover, white PLA
 
 ## License
 
