@@ -24,7 +24,7 @@ I used an IR controller which I had laying around. It is a common anode controll
 ## Flaws
 
 ### Minutes and hours set
-Unlike the other designs, I wired the hours and minutes set buttons between VCC and the CLK input of the third and fifth CD4017. This does not always work because the CLK is already in up state half of the time (connected to the CARRY-OUT pin of the previous counter).
+Unlike the other designs, I wired the hours and minutes set buttons between VCC and the CLK input of the third and fifth CD4017 in an attempt to manually control their clock. This does not work because the CLK is already in UP state half of the time (connected to the CARRY-OUT pin of the previous counter).
 A simple solution is to wire the switchs between CLK of the first counter (after D17) to Q8 (128Hz) and Q4 (2048Hz) outputs of the CD4060, making the clock advance faster.
 
 ### LED controller output
@@ -33,10 +33,9 @@ There are three resistors on the controller output which need to be removed, and
 
 ## Sources
 
-- http://www.electricstuff.co.uk/nixclock.html
-- http://www.mcamafia.de/nixie/ncp_en/ncp.htm
-- http://tr1tium.com/projects/nixie2/
-- other designs in the "Layouts" directory
+- [Mike's Electric Stuff - Build a Nixie-tube clock](http://www.electricstuff.co.uk/nixclock.html)
+- [Peter J. Wendt - My Nixie Clock Project](http://www.mcamafia.de/nixie/ncp_en/ncp.htm)
+- [Tr1tium - Yet another nixie clock project II](https://web.archive.org/web/20200124190202/http://tr1tium.com/projects/nixie2)
 
 ## Parts list
 
