@@ -1,6 +1,8 @@
 # Nixie Clock
 
-This is custom design of a Nixie clock using only integrated circuits (no micro-controller) inspired my various versions of the same design.
+([Check my new clock](https://github.com/mistic100/Nixie-Clock-IN12))
+
+This is custom design of a Nixie clock using only integrated circuits (no micro-controller) inspired my various versions of the same design. It uses IN14 tubes.
 
 ![](https://galerie.strangeplanet.fr/_data/i/upload/2020/06/08/20200608184946-f2dfbe11-me.jpg)
 
@@ -18,16 +20,25 @@ What does this repository contains :
 - Various datasheets
 
 _A note on the LED controller part :_
-I used an IR controller which I had laying around. It is a common anode controller where the LED I bought are common cathode, this is why my design contains a section to convert the common anode control to a common cathode. This section is not described in the parts list.  
+I used an IR controller which I had laying around. It is a common anode controller where the LED I bought are common cathode, this is why my design contains a section to convert the common anode control to a common cathode. This section is not described in the parts list.
+
+
+### Controls
+
+The digits are not always on to extend their lifespan, there is a capacitive touch hidden on the side of the enclosure which will power the tubes for ~15 seconds.
+
+There are two push buttons on the back to set the time.
 
 
 ## Flaws
 
 ### Minutes and hours set
+
 Unlike the other designs, I wired the hours and minutes set buttons between VCC and the CLK input of the third and fifth CD4017 in an attempt to manually control their clock. This does not work because the CLK is already in UP state half of the time (connected to the CARRY-OUT pin of the previous counter).
 A simple solution is to wire the switchs between CLK of the first counter (after D17) to Q8 (128Hz) and Q4 (2048Hz) outputs of the CD4060, making the clock advance faster.
 
 ### LED controller output
+
 There are three resistors on the controller output which need to be removed, and instead use a resistor for each LED.
 
 
@@ -36,6 +47,7 @@ There are three resistors on the controller output which need to be removed, and
 - [Mike's Electric Stuff - Build a Nixie-tube clock](http://www.electricstuff.co.uk/nixclock.html)
 - [Peter J. Wendt - My Nixie Clock Project](http://www.mcamafia.de/nixie/ncp_en/ncp.htm)
 - [Tr1tium - Yet another nixie clock project II](https://web.archive.org/web/20200124190202/http://tr1tium.com/projects/nixie2)
+
 
 ## Parts list
 
@@ -135,6 +147,7 @@ All printed at home on a Creality Ender 3
 - Enclosure, dark wood PLA
 - Tubes and indicators holders, black PLA
 - Transport cover, white PLA
+
 
 ## License
 
