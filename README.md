@@ -13,6 +13,7 @@ Rough timeline :
 - 2012 custom PCB designed on Eagle, most components bought
 - 2019 PCB redesigned from scratch on Fritzing, manufactured and assembled
 - 2020 design and 3D printing of the enclosure, final assembly
+- 2025 new design using the control board from my [other clock](https://github.com/mistic100/Nixie-Clock-IN12)
 
 What does this repository contains :
 - Fritzing schematics + PCB layout
